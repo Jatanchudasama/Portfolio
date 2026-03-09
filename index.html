@@ -7,9 +7,15 @@
 
 <title>Jatan Chudasama | Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <style>
 
@@ -17,32 +23,58 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Inter,sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
-color:white;
+font-family:Inter;
+background:#0B0F19;
+color:#F8FAFC;
 overflow-x:hidden;
 }
 
-/* animated gradient background */
-
-body::before{
-content:"";
+#particles-js{
 position:fixed;
 width:100%;
 height:100%;
-background:radial-gradient(circle at 20% 30%,#2563eb40,transparent 40%),
-radial-gradient(circle at 80% 70%,#7c3aed40,transparent 40%);
 z-index:-1;
-animation:moveBg 10s infinite alternate;
 }
 
-@keyframes moveBg{
-0%{transform:translateY(0)}
-100%{transform:translateY(-40px)}
+/* intro screen */
+
+#intro{
+position:fixed;
+width:100%;
+height:100vh;
+background:#000;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+z-index:9999;
+text-align:center;
+}
+
+#intro h1{
+font-family:Poppins;
+font-size:48px;
+letter-spacing:2px;
+}
+
+#intro p{
+margin-top:10px;
+color:#94a3b8;
+}
+
+.scroll-indicator{
+margin-top:30px;
+font-size:30px;
+animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(10px)}
 }
 
 /* navbar */
@@ -51,29 +83,36 @@ nav{
 position:fixed;
 width:100%;
 top:0;
+padding:18px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
 backdrop-filter:blur(10px);
 background:rgba(0,0,0,0.3);
 border-bottom:1px solid rgba(255,255,255,0.1);
+z-index:100;
 }
 
 nav h2{
-color:#60a5fa;
+font-family:Poppins;
+color:#3B82F6;
 }
 
 nav ul{
 display:flex;
-gap:30px;
+gap:25px;
 list-style:none;
 }
 
 nav a{
-color:white;
+color:#F8FAFC;
 text-decoration:none;
-font-weight:500;
+}
+
+/* sections */
+
+section{
+padding:120px 10%;
 }
 
 /* hero */
@@ -83,142 +122,154 @@ min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:0 10%;
 flex-wrap:wrap;
-gap:40px;
 }
 
 .hero-text h1{
-font-size:60px;
+font-family:Poppins;
+font-size:56px;
 }
 
 .hero-text span{
-background:linear-gradient(45deg,#2563eb,#7c3aed);
--webkit-background-clip:text;
-color:transparent;
+color:#3B82F6;
 }
 
 .hero-text p{
 margin-top:15px;
-color:#cbd5f5;
 max-width:500px;
+color:#cbd5f5;
 }
 
-.hero-buttons{
-margin-top:25px;
+.hero img{
+width:280px;
+border-radius:50%;
+border:4px solid #3B82F6;
 }
+
+/* buttons */
 
 .btn{
 padding:12px 28px;
 border-radius:30px;
 border:none;
 cursor:pointer;
-font-weight:600;
+margin-top:20px;
 margin-right:10px;
+font-weight:600;
 }
 
 .primary{
-background:linear-gradient(45deg,#2563eb,#7c3aed);
+background:linear-gradient(45deg,#3B82F6,#8B5CF6);
 color:white;
 }
 
 .secondary{
 background:transparent;
-border:1px solid #94a3b8;
+border:1px solid #3B82F6;
 color:white;
 }
 
-/* glass cards */
+/* cards */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
 
 .card{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
-border-radius:16px;
 padding:25px;
-backdrop-filter:blur(15px);
-transition:0.3s;
+border-radius:14px;
+backdrop-filter:blur(10px);
+transition:.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
+box-shadow:0 0 20px #3B82F6;
 }
 
-/* sections */
+/* skills circle */
 
-section{
-padding:120px 10%;
-}
-
-.section-title{
-font-size:36px;
-margin-bottom:40px;
-color:#60a5fa;
-}
-
-/* grid */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-/* skills */
-
-.skill{
-margin-top:15px;
-}
-
-.bar{
-height:8px;
-background:#1e293b;
-border-radius:6px;
-margin-top:5px;
-}
-
-.progress{
-height:100%;
-border-radius:6px;
-background:linear-gradient(90deg,#2563eb,#7c3aed);
-}
-
-/* projects */
-
-.project{
+.skill-circle{
+width:120px;
+height:120px;
+border-radius:50%;
+border:8px solid #1e293b;
 display:flex;
-flex-direction:column;
-gap:10px;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+.skill-circle span{
+position:absolute;
+font-size:18px;
+}
+
+/* timeline */
+
+.timeline{
+border-left:2px solid #3B82F6;
+padding-left:30px;
+}
+
+.timeline div{
+margin-bottom:30px;
+}
+
+/* fitness stats */
+
+.stats{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.stat{
+font-size:28px;
+color:#3B82F6;
+}
+
+/* tech icons */
+
+.tech{
+font-size:40px;
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.tech i:hover{
+color:#3B82F6;
+transform:scale(1.2);
 }
 
 /* contact */
 
-.contact{
-text-align:center;
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:none;
+border-radius:8px;
+background:#111827;
+color:white;
 }
 
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 border-top:1px solid rgba(255,255,255,0.1);
-}
-
-/* responsive */
-
-@media(max-width:768px){
-
-.hero{
-flex-direction:column;
-text-align:center;
-}
-
-.hero-text h1{
-font-size:42px;
-}
-
-nav ul{
-display:none;
-}
-
+margin-top:50px;
 }
 
 </style>
@@ -227,182 +278,239 @@ display:none;
 
 <body>
 
+<div id="particles-js"></div>
+
+<!-- Intro -->
+
+<div id="intro">
+<h1>Jatan Chudasama</h1>
+<p>Computer Engineering Student • Developer • Builder • Discipline</p>
+<div class="scroll-indicator">↓</div>
+</div>
+
+<!-- Navbar -->
+
 <nav>
-
 <h2>Jatan</h2>
-
 <ul>
-<li><a href="#about">About</a></li>
+<li><a href="#journey">Journey</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
+
+<!-- Hero -->
 
 <section class="hero">
 
-<div class="hero-text" data-aos="fade-right">
+<div class="hero-text">
 
-<h1>Jatan <span>Chudasama</span></h1>
+<h1>Hi, I'm <span>Jatan</span></h1>
+
+<h3><span id="typing"></span></h3>
 
 <p>
-
-Computer Engineering student focused on building modern web
-applications, exploring AI technologies, and developing practical
-software solutions.
-
+I build digital systems, explore AI technologies, and pursue disciplined growth through technology and fitness.
 </p>
-
-<div class="hero-buttons">
 
 <button class="btn primary" onclick="document.getElementById('projects').scrollIntoView()">View Projects</button>
 
-<button class="btn secondary" onclick="document.getElementById('contact').scrollIntoView()">Contact</button>
+<button class="btn secondary" onclick="document.getElementById('contact').scrollIntoView()">Contact Me</button>
 
 </div>
 
+<img src="https://via.placeholder.com/300">
+
+</section>
+
+<!-- Journey -->
+
+<section id="journey">
+
+<h2>My Journey</h2>
+
+<div class="timeline">
+
+<div data-aos="fade-left">
+<h3>Curiosity</h3>
+<p>Every journey begins with curiosity.</p>
 </div>
 
 <div data-aos="fade-left">
+<h3>Learning</h3>
+<p>I started exploring programming and understanding how technology works.</p>
+</div>
 
-<img src="https://via.placeholder.com/300" style="width:280px;border-radius:50%;border:4px solid #2563eb">
+<div data-aos="fade-left">
+<h3>Building</h3>
+<p>From writing my first lines of code to building real projects.</p>
+</div>
+
+<div data-aos="fade-left">
+<h3>Creating Solutions</h3>
+<p>Technology is about solving problems and building systems.</p>
+</div>
 
 </div>
 
 </section>
 
-<section id="about">
-
-<h2 class="section-title">About Me</h2>
-
-<div class="card">
-
-<p>
-
-I am a Diploma Computer Engineering student passionate about technology,
-software development, and continuous self-improvement.
-
-Alongside programming, I maintain strong discipline through fitness
-and bodybuilding which helps me stay consistent in long-term goals.
-
-My focus is to build impactful projects, improve technical skills,
-and grow as a developer in modern technology fields.
-
-</p>
-
-</div>
-
-</section>
+<!-- Skills -->
 
 <section id="skills">
 
-<h2 class="section-title">Skills</h2>
+<h2>Skills</h2>
 
 <div class="grid">
 
 <div class="card">
-
-<h3>Programming</h3>
-
-<div class="skill">
-C Programming
-<div class="bar"><div class="progress" style="width:75%"></div></div>
-</div>
-
-<div class="skill">
-Python
-<div class="bar"><div class="progress" style="width:65%"></div></div>
-</div>
-
-<div class="skill">
-JavaScript
-<div class="bar"><div class="progress" style="width:60%"></div></div>
-</div>
-
+<div class="skill-circle"><span>90%</span></div>
+<p>HTML</p>
 </div>
 
 <div class="card">
-
-<h3>Web Development</h3>
-
-<div class="skill">
-HTML
-<div class="bar"><div class="progress" style="width:85%"></div></div>
+<div class="skill-circle"><span>85%</span></div>
+<p>CSS</p>
 </div>
 
-<div class="skill">
-CSS
-<div class="bar"><div class="progress" style="width:80%"></div></div>
-</div>
-
+<div class="card">
+<div class="skill-circle"><span>80%</span></div>
+<p>C Programming</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- Projects -->
 
 <section id="projects">
 
-<h2 class="section-title">Projects</h2>
+<h2>Projects</h2>
 
 <div class="grid">
 
-<div class="card project">
-
+<div class="card">
 <h3>Gym Management System</h3>
-
-<p>Web system to manage gym members, records and memberships.</p>
-
+<p>System for managing gym members and memberships.</p>
 </div>
 
-<div class="card project">
-
+<div class="card">
 <h3>Personal AI Assistant</h3>
-
-<p>Automation assistant inspired by JARVIS for productivity.</p>
-
+<p>Automation assistant inspired by JARVIS.</p>
 </div>
 
-<div class="card project">
-
-<h3>Restaurant Website</h3>
-
-<p>Modern responsive website designed for rooftop lounge.</p>
-
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Modern developer portfolio with animations.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="contact" class="contact">
+<!-- Fitness -->
 
-<h2 class="section-title">Contact</h2>
+<section>
 
-<p>Email: jatanchudasama2010@gmail.com</p>
-
-<p>Location: Gujarat, India</p>
+<h2>Discipline Beyond Code</h2>
 
 <p>
-GitHub: Coming Soon  
-<br>
-LinkedIn: Coming Soon
+My journey in fitness taught me the power of consistency and long-term commitment.
 </p>
+
+<div class="stats">
+
+<div class="stat">1+ Years Training</div>
+<div class="stat">41kg → 51kg Progress</div>
+<div class="stat">6 Days / Week Discipline</div>
+
+</div>
+
+</section>
+
+<!-- Tech Stack -->
+
+<section>
+
+<h2>Tech Stack</h2>
+
+<div class="tech">
+
+<i class="devicon-html5-plain"></i>
+<i class="devicon-css3-plain"></i>
+<i class="devicon-javascript-plain"></i>
+<i class="devicon-python-plain"></i>
+<i class="devicon-mysql-plain"></i>
+<i class="devicon-git-plain"></i>
+
+</div>
+
+</section>
+
+<!-- Vision -->
+
+<section>
+
+<h2>Vision</h2>
+
+<p style="font-size:22px;text-align:center;margin-top:20px;">
+I believe technology and discipline can build extraordinary things.
+</p>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 style="text-align:center">Contact</h2>
+
+<form>
+
+<input type="text" placeholder="Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button class="btn primary">Send Message</button>
+
+</form>
 
 </section>
 
 <footer>
 
 <p>© 2026 Jatan Chudasama</p>
+<p>Built with passion, discipline, and curiosity.</p>
 
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
 <script>
 
-AOS.init();
+AOS.init()
+
+var typed=new Typed("#typing",{
+strings:["Developer","AI Explorer","Builder","Fitness Discipline Advocate"],
+typeSpeed:50,
+backSpeed:30,
+loop:true
+})
+
+setTimeout(()=>{
+document.getElementById("intro").style.display="none"
+},2500)
+
+particlesJS("particles-js",{
+particles:{
+number:{value:60},
+size:{value:3},
+move:{speed:2},
+line_linked:{enable:true}
+}
+})
 
 </script>
 
