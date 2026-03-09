@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,6 +69,7 @@ padding:18px 10%;
 
 nav h2{
 color:var(--accent);
+font-weight:600;
 }
 
 nav ul{
@@ -81,6 +81,7 @@ list-style:none;
 nav a{
 text-decoration:none;
 color:var(--text);
+font-weight:500;
 }
 
 .toggle{
@@ -120,11 +121,16 @@ border-radius:30px;
 border:none;
 cursor:pointer;
 font-weight:500;
+transition:0.3s;
 }
 
 .primary{
 background:linear-gradient(45deg,var(--accent),var(--accent2));
 color:white;
+}
+
+.primary:hover{
+transform:scale(1.05);
 }
 
 .secondary{
@@ -268,7 +274,10 @@ display:none;
 <h3><span id="typing"></span></h3>
 
 <p>
-I build technology projects, explore AI tools, and pursue disciplined growth through coding and fitness.
+Computer Engineering student passionate about building technology projects,
+exploring AI tools, and developing practical software solutions.
+I focus on continuous learning, discipline, and long-term growth in both
+technology and personal development.
 </p>
 
 <div class="hero-buttons">
@@ -283,7 +292,7 @@ I build technology projects, explore AI tools, and pursue disciplined growth thr
 
 <div data-aos="fade-left">
 
-<img src="https://via.placeholder.com/260" alt="profile">
+<img src="https://via.placeholder.com/260" alt="Jatan Chudasama">
 
 </div>
 
@@ -296,11 +305,27 @@ I build technology projects, explore AI tools, and pursue disciplined growth thr
 <div class="card">
 
 <p>
-I am a Diploma student in Computer Engineering focused on building practical technology solutions.
-I enjoy learning how systems work and applying programming concepts to real-world projects.
+
+I am currently pursuing a Diploma in Computer Engineering and focusing on developing
+real-world technical skills. My main interests include web development, software systems,
+and automation tools.
+
 <br><br>
-Alongside technology, I am passionate about fitness and bodybuilding. Training consistently has taught
-me discipline, consistency, and long-term focus — qualities I apply directly to coding and self-development.
+
+I enjoy understanding how technology works internally and applying programming knowledge
+to build practical projects that solve problems or improve productivity.
+
+<br><br>
+
+Outside of programming, I am passionate about fitness and bodybuilding. Training in the
+gym has taught me discipline, consistency, and mental resilience — qualities that also
+help me stay focused in my journey as a developer.
+
+<br><br>
+
+My goal is to continuously grow as a developer, build impactful projects, and contribute
+to modern technology solutions in the future.
+
 </p>
 
 </div>
@@ -380,7 +405,10 @@ me discipline, consistency, and long-term focus — qualities I apply directly t
 
 <h3>Gym Management System</h3>
 
-<p>Web application to manage gym members, records and memberships.</p>
+<p>
+A web-based system designed to manage gym members, track memberships,
+store member records, and simplify gym administration.
+</p>
 
 <div class="project-buttons">
 <a href="#">GitHub</a>
@@ -393,7 +421,10 @@ me discipline, consistency, and long-term focus — qualities I apply directly t
 
 <h3>Personal AI Assistant</h3>
 
-<p>Automation based assistant inspired by JARVIS to improve productivity.</p>
+<p>
+An automation-focused assistant inspired by JARVIS that helps automate
+tasks, provide information, and improve productivity using AI tools.
+</p>
 
 </div>
 
@@ -401,7 +432,10 @@ me discipline, consistency, and long-term focus — qualities I apply directly t
 
 <h3>Restaurant Website</h3>
 
-<p>Modern UI website designed for rooftop lounge presentation.</p>
+<p>
+A modern responsive website design created for a rooftop lounge
+restaurant to showcase menu, ambience, and online presence.
+</p>
 
 </div>
 
@@ -416,11 +450,11 @@ me discipline, consistency, and long-term focus — qualities I apply directly t
 
 <p>
 
-GitHub: Add Later  
+GitHub: Coming Soon  
 <br>
-LinkedIn: Add Later  
+LinkedIn: Coming Soon  
 <br>
-Instagram: Fitness Page  
+Instagram: Fitness Page
 
 </p>
 
@@ -436,7 +470,7 @@ Instagram: Fitness Page
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script>
 
@@ -446,8 +480,8 @@ var typed = new Typed("#typing",{
 strings:[
 "Computer Engineering Student",
 "Web Developer",
-"Tech Enthusiast",
-"Fitness Discipline Advocate"
+"Technology Enthusiast",
+"Discipline Driven Learner"
 ],
 typeSpeed:50,
 backSpeed:25,
@@ -479,4 +513,3 @@ line_linked:{enable:true}
 
 </body>
 </html>
-```
