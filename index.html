@@ -5,17 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jatan Chudasama | Developer</title>
+<title>Jatan Chudasama | Digital Builder</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 <style>
 
@@ -27,9 +27,9 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Inter;
 background:#0B0F19;
 color:#F8FAFC;
+font-family:Inter;
 overflow-x:hidden;
 }
 
@@ -40,7 +40,7 @@ height:100%;
 z-index:-1;
 }
 
-/* intro screen */
+/* intro */
 
 #intro{
 position:fixed;
@@ -49,15 +49,15 @@ height:100vh;
 background:#000;
 display:flex;
 flex-direction:column;
-align-items:center;
 justify-content:center;
-z-index:9999;
+align-items:center;
 text-align:center;
+z-index:9999;
 }
 
 #intro h1{
-font-family:Poppins;
-font-size:48px;
+font-family:"Space Grotesk";
+font-size:52px;
 letter-spacing:2px;
 }
 
@@ -66,27 +66,13 @@ margin-top:10px;
 color:#94a3b8;
 }
 
-.scroll-indicator{
-margin-top:30px;
-font-size:30px;
-animation:bounce 1.5s infinite;
-}
-
-@keyframes bounce{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(10px)}
-}
-
-/* navbar */
-
 nav{
 position:fixed;
-width:100%;
 top:0;
-padding:18px 10%;
+width:100%;
 display:flex;
 justify-content:space-between;
-align-items:center;
+padding:20px 10%;
 backdrop-filter:blur(10px);
 background:rgba(0,0,0,0.3);
 border-bottom:1px solid rgba(255,255,255,0.1);
@@ -94,7 +80,7 @@ z-index:100;
 }
 
 nav h2{
-font-family:Poppins;
+font-family:"Space Grotesk";
 color:#3B82F6;
 }
 
@@ -105,17 +91,13 @@ list-style:none;
 }
 
 nav a{
-color:#F8FAFC;
 text-decoration:none;
+color:white;
 }
-
-/* sections */
 
 section{
 padding:120px 10%;
 }
-
-/* hero */
 
 .hero{
 min-height:100vh;
@@ -125,37 +107,35 @@ justify-content:space-between;
 flex-wrap:wrap;
 }
 
-.hero-text h1{
-font-family:Poppins;
-font-size:56px;
+.hero h1{
+font-family:"Space Grotesk";
+font-size:60px;
 }
 
-.hero-text span{
+.hero span{
 color:#3B82F6;
 }
 
-.hero-text p{
+.hero p{
+max-width:520px;
 margin-top:15px;
-max-width:500px;
 color:#cbd5f5;
 }
 
 .hero img{
-width:280px;
+width:300px;
 border-radius:50%;
 border:4px solid #3B82F6;
 }
 
-/* buttons */
-
 .btn{
-padding:12px 28px;
+padding:12px 26px;
 border-radius:30px;
 border:none;
-cursor:pointer;
 margin-top:20px;
 margin-right:10px;
-font-weight:600;
+cursor:pointer;
+font-weight:500;
 }
 
 .primary{
@@ -169,44 +149,26 @@ border:1px solid #3B82F6;
 color:white;
 }
 
-/* cards */
+/* glass cards */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 }
 
 .card{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
-padding:25px;
+padding:30px;
 border-radius:14px;
-backdrop-filter:blur(10px);
-transition:.3s;
+backdrop-filter:blur(12px);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 box-shadow:0 0 20px #3B82F6;
-}
-
-/* skills circle */
-
-.skill-circle{
-width:120px;
-height:120px;
-border-radius:50%;
-border:8px solid #1e293b;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-}
-
-.skill-circle span{
-position:absolute;
-font-size:18px;
 }
 
 /* timeline */
@@ -217,15 +179,16 @@ padding-left:30px;
 }
 
 .timeline div{
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
-/* fitness stats */
+/* stats */
 
 .stats{
 display:flex;
 gap:40px;
 flex-wrap:wrap;
+margin-top:30px;
 }
 
 .stat{
@@ -236,10 +199,10 @@ color:#3B82F6;
 /* tech icons */
 
 .tech{
-font-size:40px;
 display:flex;
 flex-wrap:wrap;
 gap:25px;
+font-size:42px;
 }
 
 .tech i:hover{
@@ -247,7 +210,7 @@ color:#3B82F6;
 transform:scale(1.2);
 }
 
-/* contact */
+/* form */
 
 form{
 max-width:500px;
@@ -259,9 +222,9 @@ gap:15px;
 
 input,textarea{
 padding:12px;
+background:#111827;
 border:none;
 border-radius:8px;
-background:#111827;
 color:white;
 }
 
@@ -269,54 +232,47 @@ footer{
 text-align:center;
 padding:40px;
 border-top:1px solid rgba(255,255,255,0.1);
-margin-top:50px;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div id="particles-js"></div>
 
-<!-- Intro -->
-
 <div id="intro">
 <h1>Jatan Chudasama</h1>
-<p>Computer Engineering Student • Developer • Builder • Discipline</p>
-<div class="scroll-indicator">↓</div>
+<p>Digital Builder • Computer Engineering Student • Automation Explorer</p>
+<p style="margin-top:20px;font-size:14px;">Scroll to explore the journey</p>
 </div>
-
-<!-- Navbar -->
 
 <nav>
 <h2>Jatan</h2>
 <ul>
-<li><a href="#journey">Journey</a></li>
-<li><a href="#skills">Skills</a></li>
+<li><a href="#capabilities">Capabilities</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#vision">Vision</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
-<!-- Hero -->
-
 <section class="hero">
 
-<div class="hero-text">
+<div>
 
-<h1>Hi, I'm <span>Jatan</span></h1>
-
-<h3><span id="typing"></span></h3>
+<h1>Building systems,<br><span>exploring technology</span></h1>
 
 <p>
-I build digital systems, explore AI technologies, and pursue disciplined growth through technology and fitness.
+
+Computer Engineering student experimenting with web development, AI tools,
+and automation systems while documenting a journey of continuous improvement.
+
 </p>
 
-<button class="btn primary" onclick="document.getElementById('projects').scrollIntoView()">View Projects</button>
+<button class="btn primary" onclick="document.getElementById('projects').scrollIntoView()">Explore Work</button>
 
-<button class="btn secondary" onclick="document.getElementById('contact').scrollIntoView()">Contact Me</button>
+<button class="btn secondary">Start the Journey</button>
 
 </div>
 
@@ -324,117 +280,131 @@ I build digital systems, explore AI technologies, and pursue disciplined growth 
 
 </section>
 
-<!-- Journey -->
+<section>
 
-<section id="journey">
+<h2>Curiosity</h2>
 
-<h2>My Journey</h2>
+<p data-aos="fade-up">
+Every builder begins with curiosity.
+</p>
 
-<div class="timeline">
+<p data-aos="fade-up">
+I started by learning how software works and experimenting with programming.
+</p>
 
-<div data-aos="fade-left">
-<h3>Curiosity</h3>
-<p>Every journey begins with curiosity.</p>
-</div>
-
-<div data-aos="fade-left">
-<h3>Learning</h3>
-<p>I started exploring programming and understanding how technology works.</p>
-</div>
-
-<div data-aos="fade-left">
-<h3>Building</h3>
-<p>From writing my first lines of code to building real projects.</p>
-</div>
-
-<div data-aos="fade-left">
-<h3>Creating Solutions</h3>
-<p>Technology is about solving problems and building systems.</p>
-</div>
-
-</div>
+<p data-aos="fade-up">
+Simple lines of code slowly turned into real projects.
+</p>
 
 </section>
 
-<!-- Skills -->
+<section id="capabilities">
 
-<section id="skills">
-
-<h2>Skills</h2>
+<h2>Capabilities</h2>
 
 <div class="grid">
 
 <div class="card">
-<div class="skill-circle"><span>90%</span></div>
-<p>HTML</p>
+<h3>Digital Development</h3>
+<p>
+Designing interactive web experiences and building structured interfaces
+using modern web technologies.
+</p>
 </div>
 
 <div class="card">
-<div class="skill-circle"><span>85%</span></div>
-<p>CSS</p>
+<h3>Programming Foundations</h3>
+<p>
+Applying structured programming principles and logical thinking to
+build functional digital systems.
+</p>
 </div>
 
 <div class="card">
-<div class="skill-circle"><span>80%</span></div>
-<p>C Programming</p>
+<h3>Automation Exploration</h3>
+<p>
+Experimenting with AI tools and automation systems to improve
+digital workflows.
+</p>
+</div>
+
+<div class="card">
+<h3>Creative Systems</h3>
+<p>
+Approaching technology as a combination of design,
+logic, experimentation, and iteration.
+</p>
 </div>
 
 </div>
 
 </section>
-
-<!-- Projects -->
 
 <section id="projects">
 
-<h2>Projects</h2>
+<h2>Projects & Experiments</h2>
 
 <div class="grid">
 
 <div class="card">
+
 <h3>Gym Management System</h3>
-<p>System for managing gym members and memberships.</p>
+
+<p>
+A web application designed to organize and manage gym membership data
+through a structured interface and centralized system.
+</p>
+
 </div>
 
 <div class="card">
-<h3>Personal AI Assistant</h3>
-<p>Automation assistant inspired by JARVIS.</p>
+
+<h3>NOVA Personal AI Assistant</h3>
+
+<p>
+An experimental assistant exploring automation, AI interaction,
+and productivity workflows.
+</p>
+
 </div>
 
 <div class="card">
-<h3>Portfolio Website</h3>
-<p>Modern developer portfolio with animations.</p>
+
+<h3>Interactive Portfolio Platform</h3>
+
+<p>
+A dynamic platform designed to present projects, ideas, and philosophy
+through storytelling and modern UI design.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- Fitness -->
-
 <section>
 
-<h2>Discipline Beyond Code</h2>
+<h2>Discipline Beyond Technology</h2>
 
 <p>
-My journey in fitness taught me the power of consistency and long-term commitment.
+My journey in bodybuilding taught me something powerful.
+Progress is not built in days — it is built through consistency.
 </p>
 
 <div class="stats">
 
-<div class="stat">1+ Years Training</div>
-<div class="stat">41kg → 51kg Progress</div>
-<div class="stat">6 Days / Week Discipline</div>
+<div class="stat">1+ Year Training</div>
+<div class="stat">41kg → 51kg</div>
+<div class="stat">6 Days / Week</div>
 
 </div>
 
 </section>
 
-<!-- Tech Stack -->
-
 <section>
 
-<h2>Tech Stack</h2>
+<h2>Technology Stack</h2>
 
 <div class="tech">
 
@@ -442,6 +412,7 @@ My journey in fitness taught me the power of consistency and long-term commitmen
 <i class="devicon-css3-plain"></i>
 <i class="devicon-javascript-plain"></i>
 <i class="devicon-python-plain"></i>
+<i class="devicon-c-plain"></i>
 <i class="devicon-mysql-plain"></i>
 <i class="devicon-git-plain"></i>
 
@@ -449,19 +420,50 @@ My journey in fitness taught me the power of consistency and long-term commitmen
 
 </section>
 
-<!-- Vision -->
-
 <section>
 
-<h2>Vision</h2>
+<h2>Timeline</h2>
 
-<p style="font-size:22px;text-align:center;margin-top:20px;">
-I believe technology and discipline can build extraordinary things.
-</p>
+<div class="timeline">
+
+<div>
+<strong>2024</strong>
+<p>Started Diploma in Computer Engineering</p>
+</div>
+
+<div>
+<strong>2025</strong>
+<p>Built first web development projects</p>
+</div>
+
+<div>
+<strong>2026</strong>
+<p>Exploring AI systems and automation</p>
+</div>
+
+<div>
+<strong>Future</strong>
+<p>Building intelligent digital platforms</p>
+</div>
+
+</div>
 
 </section>
 
-<!-- Contact -->
+<section id="vision">
+
+<h2>Vision</h2>
+
+<p style="font-size:22px;max-width:700px;margin:auto;text-align:center">
+
+I believe technology and discipline together create powerful outcomes.
+
+My goal is to build intelligent digital systems while inspiring growth
+through creativity, persistence, and continuous improvement.
+
+</p>
+
+</section>
 
 <section id="contact">
 
@@ -469,10 +471,8 @@ I believe technology and discipline can build extraordinary things.
 
 <form>
 
-<input type="text" placeholder="Name">
-
-<input type="email" placeholder="Email">
-
+<input placeholder="Name">
+<input placeholder="Email">
 <textarea rows="5" placeholder="Message"></textarea>
 
 <button class="btn primary">Send Message</button>
@@ -484,7 +484,7 @@ I believe technology and discipline can build extraordinary things.
 <footer>
 
 <p>© 2026 Jatan Chudasama</p>
-<p>Built with passion, discipline, and curiosity.</p>
+<p>Exploring technology. Building systems. Growing every day.</p>
 
 </footer>
 
@@ -492,16 +492,9 @@ I believe technology and discipline can build extraordinary things.
 
 AOS.init()
 
-var typed=new Typed("#typing",{
-strings:["Developer","AI Explorer","Builder","Fitness Discipline Advocate"],
-typeSpeed:50,
-backSpeed:30,
-loop:true
-})
-
 setTimeout(()=>{
 document.getElementById("intro").style.display="none"
-},2500)
+},3000)
 
 particlesJS("particles-js",{
 particles:{
