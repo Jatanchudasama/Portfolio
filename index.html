@@ -1,511 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Jatan Chudasama | Digital Builder</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<title>My Portfolio</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+:root{
+--bg:#ffffff;
+--text:#111;
+--card:#f5f5f5;
+--accent:#0077ff;
+}
+
+body.dark{
+--bg:#0f172a;
+--text:#e5e5e5;
+--card:#1e293b;
 }
 
 body{
-background:#0B0F19;
-color:#F8FAFC;
-font-family:Inter;
-overflow-x:hidden;
-}
-
-#particles-js{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
-}
-
-/* intro */
-
-#intro{
-position:fixed;
-width:100%;
-height:100vh;
-background:#000;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-z-index:9999;
-}
-
-#intro h1{
-font-family:"Space Grotesk";
-font-size:52px;
-letter-spacing:2px;
-}
-
-#intro p{
-margin-top:10px;
-color:#94a3b8;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-padding:20px 10%;
-backdrop-filter:blur(10px);
-background:rgba(0,0,0,0.3);
-border-bottom:1px solid rgba(255,255,255,0.1);
-z-index:100;
-}
-
-nav h2{
-font-family:"Space Grotesk";
-color:#3B82F6;
-}
-
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-}
-
-section{
-padding:120px 10%;
-}
-
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
-}
-
-.hero h1{
-font-family:"Space Grotesk";
-font-size:60px;
-}
-
-.hero span{
-color:#3B82F6;
-}
-
-.hero p{
-max-width:520px;
-margin-top:15px;
-color:#cbd5f5;
-}
-
-.hero img{
-width:300px;
-border-radius:50%;
-border:4px solid #3B82F6;
-}
-
-.btn{
-padding:12px 26px;
-border-radius:30px;
-border:none;
-margin-top:20px;
-margin-right:10px;
-cursor:pointer;
-font-weight:500;
-}
-
-.primary{
-background:linear-gradient(45deg,#3B82F6,#8B5CF6);
-color:white;
-}
-
-.secondary{
-background:transparent;
-border:1px solid #3B82F6;
-color:white;
-}
-
-/* glass cards */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-padding:30px;
-border-radius:14px;
-backdrop-filter:blur(12px);
+margin:0;
+font-family:Arial, sans-serif;
+background:var(--bg);
+color:var(--text);
 transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 20px #3B82F6;
-}
-
-/* timeline */
-
-.timeline{
-border-left:2px solid #3B82F6;
-padding-left:30px;
-}
-
-.timeline div{
-margin-bottom:35px;
-}
-
-/* stats */
-
-.stats{
+header{
 display:flex;
-gap:40px;
-flex-wrap:wrap;
-margin-top:30px;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
 }
 
-.stat{
-font-size:28px;
-color:#3B82F6;
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:var(--text);
+font-weight:600;
 }
 
-/* tech icons */
-
-.tech{
-display:flex;
-flex-wrap:wrap;
-gap:25px;
-font-size:42px;
-}
-
-.tech i:hover{
-color:#3B82F6;
-transform:scale(1.2);
-}
-
-/* form */
-
-form{
-max-width:500px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-input,textarea{
-padding:12px;
-background:#111827;
+.toggle-btn{
+cursor:pointer;
 border:none;
-border-radius:8px;
+background:var(--accent);
 color:white;
+padding:8px 14px;
+border-radius:6px;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+color:gray;
+}
+
+section{
+padding:80px 60px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+margin-bottom:40px;
+font-size:32px;
+}
+
+.skills{
+display:grid;
+gap:25px;
+}
+
+.skill{
+background:var(--card);
+padding:20px;
+border-radius:10px;
+}
+
+.skill-name{
+margin-bottom:10px;
+}
+
+.bar{
+background:#ddd;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.bar-fill{
+height:100%;
+width:0;
+background:var(--accent);
+transition:width 1.5s ease;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:var(--card);
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+opacity:0;
+transform:translateY(30px);
+}
+
+.project-card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.project-card:hover{
+transform:translateY(-8px) scale(1.02);
 }
 
 footer{
 text-align:center;
 padding:40px;
-border-top:1px solid rgba(255,255,255,0.1);
+color:gray;
+}
+
+@media(max-width:700px){
+
+header{
+padding:20px;
+}
+
+section{
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
 }
 
 </style>
 </head>
 
+
 <body>
 
-<div id="particles-js"></div>
+<header>
 
-<div id="intro">
-<h1>Jatan Chudasama</h1>
-<p>Digital Builder • Computer Engineering Student • Automation Explorer</p>
-<p style="margin-top:20px;font-size:14px;">Scroll to explore the journey</p>
-</div>
-
-<nav>
-<h2>Jatan</h2>
-<ul>
-<li><a href="#capabilities">Capabilities</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#vision">Vision</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-
-<section class="hero">
+<h2>MyPortfolio</h2>
 
 <div>
+<nav style="display:inline;">
+<a href="#">Home</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+</nav>
 
-<h1>Building systems,<br><span>exploring technology</span></h1>
+<button class="toggle-btn" onclick="toggleMode()">Mode</button>
+</div>
 
-<p>
+</header>
 
-Computer Engineering student experimenting with web development, AI tools,
-and automation systems while documenting a journey of continuous improvement.
 
-</p>
+<div class="hero">
 
-<button class="btn primary" onclick="document.getElementById('projects').scrollIntoView()">Explore Work</button>
-
-<button class="btn secondary">Start the Journey</button>
+<h1>Hello, I'm Jatan</h1>
+<p>Web Developer | Creative Thinker</p>
 
 </div>
 
-<img src="https://via.placeholder.com/300">
 
-</section>
 
-<section>
+<section id="skills">
 
-<h2>Curiosity</h2>
+<h2>Skills</h2>
 
-<p data-aos="fade-up">
-Every builder begins with curiosity.
-</p>
+<div class="skills">
 
-<p data-aos="fade-up">
-I started by learning how software works and experimenting with programming.
-</p>
-
-<p data-aos="fade-up">
-Simple lines of code slowly turned into real projects.
-</p>
-
-</section>
-
-<section id="capabilities">
-
-<h2>Capabilities</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Digital Development</h3>
-<p>
-Designing interactive web experiences and building structured interfaces
-using modern web technologies.
-</p>
+<div class="skill">
+<div class="skill-name">HTML</div>
+<div class="bar"><div class="bar-fill" data-width="90%"></div></div>
 </div>
 
-<div class="card">
-<h3>Programming Foundations</h3>
-<p>
-Applying structured programming principles and logical thinking to
-build functional digital systems.
-</p>
+<div class="skill">
+<div class="skill-name">CSS</div>
+<div class="bar"><div class="bar-fill" data-width="85%"></div></div>
 </div>
 
-<div class="card">
-<h3>Automation Exploration</h3>
-<p>
-Experimenting with AI tools and automation systems to improve
-digital workflows.
-</p>
-</div>
-
-<div class="card">
-<h3>Creative Systems</h3>
-<p>
-Approaching technology as a combination of design,
-logic, experimentation, and iteration.
-</p>
+<div class="skill">
+<div class="skill-name">JavaScript</div>
+<div class="bar"><div class="bar-fill" data-width="70%"></div></div>
 </div>
 
 </div>
 
 </section>
+
+
 
 <section id="projects">
 
-<h2>Projects & Experiments</h2>
+<h2>Projects</h2>
 
-<div class="grid">
+<div class="projects">
 
-<div class="card">
-
-<h3>Gym Management System</h3>
-
-<p>
-A web application designed to organize and manage gym membership data
-through a structured interface and centralized system.
-</p>
-
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Personal website to showcase my work.</p>
 </div>
 
-<div class="card">
-
-<h3>NOVA Personal AI Assistant</h3>
-
-<p>
-An experimental assistant exploring automation, AI interaction,
-and productivity workflows.
-</p>
-
+<div class="project-card">
+<h3>Gym Tracker</h3>
+<p>Workout progress tracking web app.</p>
 </div>
 
-<div class="card">
-
-<h3>Interactive Portfolio Platform</h3>
-
-<p>
-A dynamic platform designed to present projects, ideas, and philosophy
-through storytelling and modern UI design.
-</p>
-
+<div class="project-card">
+<h3>Weather App</h3>
+<p>Shows real-time weather using API.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
-
-<h2>Discipline Beyond Technology</h2>
-
-<p>
-My journey in bodybuilding taught me something powerful.
-Progress is not built in days — it is built through consistency.
-</p>
-
-<div class="stats">
-
-<div class="stat">1+ Year Training</div>
-<div class="stat">41kg → 51kg</div>
-<div class="stat">6 Days / Week</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Technology Stack</h2>
-
-<div class="tech">
-
-<i class="devicon-html5-plain"></i>
-<i class="devicon-css3-plain"></i>
-<i class="devicon-javascript-plain"></i>
-<i class="devicon-python-plain"></i>
-<i class="devicon-c-plain"></i>
-<i class="devicon-mysql-plain"></i>
-<i class="devicon-git-plain"></i>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Timeline</h2>
-
-<div class="timeline">
-
-<div>
-<strong>2024</strong>
-<p>Started Diploma in Computer Engineering</p>
-</div>
-
-<div>
-<strong>2025</strong>
-<p>Built first web development projects</p>
-</div>
-
-<div>
-<strong>2026</strong>
-<p>Exploring AI systems and automation</p>
-</div>
-
-<div>
-<strong>Future</strong>
-<p>Building intelligent digital platforms</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="vision">
-
-<h2>Vision</h2>
-
-<p style="font-size:22px;max-width:700px;margin:auto;text-align:center">
-
-I believe technology and discipline together create powerful outcomes.
-
-My goal is to build intelligent digital systems while inspiring growth
-through creativity, persistence, and continuous improvement.
-
-</p>
-
-</section>
-
-<section id="contact">
-
-<h2 style="text-align:center">Contact</h2>
-
-<form>
-
-<input placeholder="Name">
-<input placeholder="Email">
-<textarea rows="5" placeholder="Message"></textarea>
-
-<button class="btn primary">Send Message</button>
-
-</form>
-
-</section>
 
 <footer>
-
-<p>© 2026 Jatan Chudasama</p>
-<p>Exploring technology. Building systems. Growing every day.</p>
-
+© 2026 Jatan Portfolio
 </footer>
+
+
 
 <script>
 
-AOS.init()
+function toggleMode(){
+document.body.classList.toggle("dark")
+}
 
-setTimeout(()=>{
-document.getElementById("intro").style.display="none"
-},3000)
 
-particlesJS("particles-js",{
-particles:{
-number:{value:60},
-size:{value:3},
-move:{speed:2},
-line_linked:{enable:true}
+
+const skillBars = document.querySelectorAll(".bar-fill")
+
+const skillObserver = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+
+let bar = entry.target
+bar.style.width = bar.dataset.width
+
 }
 })
+})
+
+skillBars.forEach(bar=>{
+skillObserver.observe(bar)
+})
+
+
+
+const cards = document.querySelectorAll(".project-card")
+
+const cardObserver = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show")
+}
+})
+})
+
+cards.forEach(card=>{
+cardObserver.observe(card)
+})
+
 
 </script>
+
 
 </body>
 </html>
